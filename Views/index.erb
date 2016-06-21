@@ -1,0 +1,53 @@
+<html>
+  <head>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+  <body>
+
+    <section class="header">
+      <h1>Kontaktdaten</h1>
+      <br>
+     <p style="margin-top: 25px"><h2>Und ganz wichtig: Der jetzige Timecode lautet <%= Time.now %>'</h2></p>
+    </section>
+
+
+    <section class="tabellenbereich">
+
+
+
+     <table>
+       <tr>
+         <th>Name</th>
+         <th>Nummer</th>
+         <th>Wohnort</th>
+       </tr>
+
+    <% @freunde.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.nummer %></td>
+      <td><%= item.ort %></td>
+    </tr>
+
+    <% end %>
+
+    <tr>
+
+    <form action='/' method="POST">
+      <td> <input type="text" name="name"></td>
+      <td> <input type="text" name="nummer"></td>
+      <td> <input type="text" name="ort"></td>
+      <td> <button type="submit"> Add friend </button></td>
+    </form>
+
+    </tr>
+
+     </table>
+
+</section>
+
+
+
+
+  </body>
+</html>

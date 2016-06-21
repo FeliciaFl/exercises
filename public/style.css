@@ -1,0 +1,80 @@
+/*
+HPI Yellow: #73d216;
+HPI Orange: #4e9a06;
+HPI Red: #cc0000;
+*/
+
+* {
+	margin:0 ;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+  background-color: #FFFFFF
+}
+
+table {
+	  background: #FFFFFF;
+		opacity: 0.5;
+		margin: 10
+}
+
+h1 {
+	font-size:25px;
+	font-weight:500;
+	color:#FFFFFF;
+	float:left;
+	width:100%;
+}
+
+h2 {
+	font-size:20px;
+	font-weight:500;
+	color:#596164;
+	float:left;
+	width:100%;
+}
+
+h3 {
+	float:left;
+	width:100%;
+	font-size:26px;
+	font-weight:500;
+	color:#596164;
+	float:left;
+	width:100%;
+}
+
+h4 {
+	float:left;
+	width:100%;
+}
+
+h5 {
+	float:left;
+	width:100%;
+	font-size:18px;
+	font-weight:500;
+	color:#596164;
+	opacity:0.5;
+	float:left;
+	width:100%;
+}
+
+section {
+	margin: 10
+
+}
+
+.tabellenbereich {
+background-image: url(rsz__dsc5643.jpg);
+padding: 10
+
+}
+
+
+.header {
+background-color: #4e9a06;
+height: 100px;
+padding: 10
+}
