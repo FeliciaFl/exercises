@@ -16,12 +16,14 @@ body {
 table {
 	  background: #FFFFFF;
 		opacity: 0.5;
-		margin: 10
+		margin: 10;
+		width: 520px;
+		padding: 10;
 }
 
 h1 {
-	font-size:25px;
-	font-weight:500;
+	font-size:35px;
+	font-weight:600;
 	color:#FFFFFF;
 	float:left;
 	width:100%;
@@ -30,7 +32,8 @@ h1 {
 h2 {
 	font-size:20px;
 	font-weight:500;
-	color:#596164;
+	color:#fff;
+	font-style: italic;
 	float:left;
 	width:100%;
 }
@@ -74,7 +77,18 @@ padding: 10
 
 
 .header {
-background-color: #4e9a06;
+background-color: #447535;
 height: 100px;
 padding: 10
+}
+
+form {
+	background: #FFFFFF;
+	opacity: 0.8;
+	margin: 10;
+  width: 500px;
+	white-space: nowrap;
+	overflow:hidden;
+	padding: 10;
+
 }
