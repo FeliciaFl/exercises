@@ -74,7 +74,7 @@ background-image: url(Sewing_Tools.jpg);
 padding: 10;
 width:100%;
 background-repeat: no-repeat;
-position:absolute;
+
 
 }
 
@@ -82,7 +82,9 @@ position:absolute;
 .header {
 background-color: red;
 height: 100px;
+width: 100%;
 padding: 10;
+
 }
 
 form {
