@@ -38,6 +38,18 @@ schnittmustersammlungalt << a
 redirect '/'
 
 end
+
+
+
+get '/undo' do
+
+
+schnittmustersammlung << schnittmustersammlungalt.pop
+
+redirect '/'
+
+end
+
 post '/' do
 
   schnittmustersammlung << Schnittmuster.new(params[:name], params[:stoff], params[:laenge])
