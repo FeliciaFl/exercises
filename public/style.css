@@ -70,16 +70,19 @@ section {
 }
 
 .tabellenbereich {
-background-image: url(rsz__dsc5643.jpg);
-padding: 10
+background-image: url(Sewing_Tools.jpg);
+padding: 10;
+width:100%;
+background-repeat: no-repeat;
+position:absolute;
 
 }
 
 
 .header {
-background-color: #447535;
+background-color: red;
 height: 100px;
-padding: 10
+padding: 10;
 }
 
 form {

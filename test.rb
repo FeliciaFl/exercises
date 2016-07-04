@@ -1,27 +1,27 @@
 require "sinatra"
 
 
-class Freund
-  attr_reader :name, :nummer, :ort
-  def initialize (name, nummer, ort)
+class Schnittmuster
+  attr_reader :name, :stoff, :laenge
+  def initialize (name, stoff, laenge)
   @name=name
-  @nummer=nummer
-  @ort=ort
+  @stoff=stoff
+  @laenge=laenge
 
 end
 end
 
-freunde=[
+schnittmuster=[
 
-  Freund.new("Jana Rudolph", "0338", "Bernau"),
-  Freund.new("Iris Riege", "030", "Berlin"),
-  Freund.new("Robert Winter", "030", "Lichtenberg")
+  Schnittmuster.new("Butterick 5354", "Webstoff", "1,5m"),
+  Schnittmuster.new("Butterick 5497", "Jersey", "1,5m"),
+  Schnittmuster.new("Colette Aurora", "Jersey", "1m")
 
 ]
 
 get '/' do
 
-@freunde=freunde
+@schnittmuster=schnittmuster
 
  erb :index
 
@@ -30,7 +30,7 @@ end
 
 post '/' do
 
-  freunde << Freund.new(params[:name], params[:nummer], params[:ort])
+  schnittmuster << Schnittmuster.new(params[:name], params[:stoff], params[:laenge])
 
   redirect '/'
 end

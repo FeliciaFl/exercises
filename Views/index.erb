@@ -5,9 +5,8 @@
   <body>
 
     <section class="header">
-      <h1>Kontaktdaten</h1>
+      <h1>The Digital Seamstress</h1>
       <br>
-     <p style="margin-top: 30px"><h2>Und ganz wichtig: Der jetzige Timecode lautet <%= Time.now %>'</h2></p>
     </section>
 
 
@@ -17,16 +16,18 @@
 
      <table>
        <tr>
-         <th>Name</th>
-         <th>Nummer</th>
-         <th>Wohnort</th>
+         <th>Schnittmuster</th>
+         <th>Stoff</th>
+         <th>Länge</th>
+         <th>Aktion</th>
        </tr>
 
-    <% @freunde.each do |item| %>
+    <% @schnittmuster.each do |item| %>
     <tr>
       <td><%= item.name %></td>
-      <td><%= item.nummer %></td>
-      <td><%= item.ort %></td>
+      <td><%= item.stoff %></td>
+      <td><%= item.laenge %></td>
+      <td><%= item.laenge %></td>
     </tr>
 
     <% end %>
@@ -36,8 +37,8 @@
 
      <form action='/' method="POST">
        <input type="text" name="name">
-       <input type="text" name="nummer">
-       <input type="text" name="ort">
+       <input type="text" name="stoff">
+       <input type="text" name="laenge">
        <button type="submit"> Add </button>
      </form>
 
