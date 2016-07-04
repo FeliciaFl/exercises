@@ -19,7 +19,24 @@ table {
 		margin: 10;
 		width: 520px;
 		padding: 10;
+
 }
+
+.tabellenbereich>table {
+	margin-left:auto;
+	margin-right: auto;
+
+
+}
+
+
+.tabellenbereich>form {
+	margin-left:auto;
+	margin-right: auto;
+
+
+}
+
 
 h1 {
 	font-size:35px;
@@ -27,7 +44,7 @@ h1 {
 	color:#FFFFFF;
 	float:left;
 	width:100%;
-}
+	}
 
 h2 {
 	font-size:20px;
@@ -65,25 +82,33 @@ h5 {
 }
 
 section {
-	margin: 10
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10;
+
 
 }
 
 .tabellenbereich {
 background-image: url(Sewing_Tools.jpg);
 padding: 10;
-width:100%;
+width:97%;
+background-size: cover;
 background-repeat: no-repeat;
+margin-left: auto;
+margin-right: auto;
 
 
 }
 
 
 .header {
-background-color: red;
+background-color: #ae160c;
 height: 100px;
-width: 100%;
+width: 97%;
 padding: 10;
+line-height: 100px;
+
 
 }
 
