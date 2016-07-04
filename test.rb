@@ -50,6 +50,27 @@ redirect '/'
 
 end
 
+
+
+
+get '/selection' do
+
+@schnittmustersammlung=schnittmustersammlung.select do |schnittmuster|
+  params[:laengenselektion]==schnittmuster.laenge &&
+  params[:stoffselektion]==schnittmuster.stoff
+
+end
+
+erb :index
+
+
+end
+
+
+
+
+
+
 post '/' do
 
   schnittmustersammlung << Schnittmuster.new(params[:name], params[:stoff], params[:laenge])

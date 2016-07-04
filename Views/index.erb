@@ -51,8 +51,52 @@
 </section>
 
 
+
+<form action='/selection' method="GET">
+
+  <p>Stoffart<br>
+
+    <%
+
+    hash={}
+    @schnittmustersammlung.each do |schnittmuster|
+      hash[schnittmuster.stoff]=1
+    end
+
+
+    hash.keys.each do |stoff|
+    %>
+
+  <input type="radio" name="stoffselektion" value="<%= stoff %>" checked> <%= stoff %> <br>
+
+  <% end %>
+
+
+
+  </p>
 <br>
-<br>
+
+  <p>Länge<br>
+      <%
+      hash={}
+    @schnittmustersammlung.each do |schnittmuster|
+      hash[schnittmuster.laenge]=1
+    end
+
+    hash.keys.each do |laenge|
+    %>
+    <input type="radio" name="laengenselektion" value="<%= laenge %>" checked> <%= laenge %> <br>
+
+  <% end %>
+  </p>
+
+
+
+
+
+    <button type="submit"> Select </button>
+
+</form>
 
 
   </body>
