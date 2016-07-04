@@ -22,12 +22,12 @@
          <th>Aktion</th>
        </tr>
 
-    <% @schnittmuster.each do |item| %>
+    <% @schnittmustersammlung.each do |item| %>
     <tr>
       <td><%= item.name %></td>
       <td><%= item.stoff %></td>
       <td><%= item.laenge %></td>
-      <td><%= item.laenge %></td>
+      <td><a href="/delete/<%= @schnittmustersammlung.index(item) %>">Löschen</a></td>
     </tr>
 
     <% end %>

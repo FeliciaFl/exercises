@@ -11,7 +11,7 @@ class Schnittmuster
 end
 end
 
-schnittmuster=[
+schnittmustersammlung=[
 
   Schnittmuster.new("Butterick 5354", "Webstoff", "1,5m"),
   Schnittmuster.new("Butterick 5497", "Jersey", "1,5m"),
@@ -21,16 +21,26 @@ schnittmuster=[
 
 get '/' do
 
-@schnittmuster=schnittmuster
+@schnittmustersammlung=schnittmustersammlung
 
  erb :index
 
 end
 
 
+schnittmustersammlungalt=[]
+
+
+get '/delete/:schnitt' do
+
+a = schnittmustersammlung.delete_at(params[:schnitt].to_i)
+schnittmustersammlungalt << a
+redirect '/'
+
+end
 post '/' do
 
-  schnittmuster << Schnittmuster.new(params[:name], params[:stoff], params[:laenge])
+  schnittmustersammlung << Schnittmuster.new(params[:name], params[:stoff], params[:laenge])
 
   redirect '/'
 end
