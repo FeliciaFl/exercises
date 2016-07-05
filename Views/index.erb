@@ -10,6 +10,56 @@
     </section>
 
 
+
+
+
+    <form action='/selection' method="GET">
+
+      <p>Stoffart<br>
+
+        <%
+
+        hash={}
+        @schnittmusterarchiv.each do |schnittmuster|
+          hash[schnittmuster.stoff]=1
+        end
+
+
+        hash.keys.each do |stoff|
+        %>
+
+      <input type="radio" name="stoffselektion" value="<%= stoff %>" checked> <%= stoff %> <br>
+
+      <% end %>
+
+
+
+      </p>
+    <br>
+
+      <p>Länge<br>
+          <%
+          hash={}
+        @schnittmusterarchiv.each do |schnittmuster|
+          hash[schnittmuster.laenge]=1
+        end
+
+        hash.keys.each do |laenge|
+        %>
+        <input type="radio" name="laengenselektion" value="<%= laenge %>" checked> <%= laenge %> <br>
+
+      <% end %>
+      </p>
+
+
+
+
+
+        <button type="submit"> Select </button>
+
+    </form>
+
+
     <section class="tabellenbereich">
 
 
@@ -19,15 +69,21 @@
          <th>Schnittmuster</th>
          <th>Stoff</th>
          <th>Länge</th>
+         <th>Getestet?</th>
          <th>Aktion</th>
        </tr>
 
-    <% @schnittmustersammlung.each do |item| %>
-    <tr>
+    <% @schnittmusteranzeige.each do |item| %>
+    <tr
+    <%= if item.done=="ja"
+    "bgcolor=\"#4CC552\""
+    end %>
+    >
       <td><%= item.name %></td>
       <td><%= item.stoff %></td>
       <td><%= item.laenge %></td>
-      <td><a href="/delete/<%= @schnittmustersammlung.index(item) %>">Löschen</a></td>
+      <td><%= item.done %></td>
+      <td><a href="/delete/<%= @schnittmusteranzeige.index(item) %>">Löschen</a></td>
     </tr>
 
     <% end %>
@@ -39,64 +95,17 @@
        <input type="text" name="name">
        <input type="text" name="stoff">
        <input type="text" name="laenge">
+       <input type="text" name="done">
        <button type="submit"> Add </button>
      </form>
 
 </section>
 
 
+    <section heigth=100px>
+    <a href="/undo">Löschen rückgängig</a>
+    </section>
 
-<section heigth=100px>
-<a href="/undo">Löschen rückgängig</a>
-</section>
-
-
-
-<form action='/selection' method="GET">
-
-  <p>Stoffart<br>
-
-    <%
-
-    hash={}
-    @schnittmustersammlung.each do |schnittmuster|
-      hash[schnittmuster.stoff]=1
-    end
-
-
-    hash.keys.each do |stoff|
-    %>
-
-  <input type="radio" name="stoffselektion" value="<%= stoff %>" checked> <%= stoff %> <br>
-
-  <% end %>
-
-
-
-  </p>
-<br>
-
-  <p>Länge<br>
-      <%
-      hash={}
-    @schnittmustersammlung.each do |schnittmuster|
-      hash[schnittmuster.laenge]=1
-    end
-
-    hash.keys.each do |laenge|
-    %>
-    <input type="radio" name="laengenselektion" value="<%= laenge %>" checked> <%= laenge %> <br>
-
-  <% end %>
-  </p>
-
-
-
-
-
-    <button type="submit"> Select </button>
-
-</form>
 
 
   </body>

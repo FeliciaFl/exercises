@@ -17,8 +17,16 @@ table {
 	  background: #FFFFFF;
 		opacity: 0.5;
 		margin: 10;
-		width: 520px;
+		width: 730px;
 		padding: 10;
+		border-collapse: collapse;
+
+}
+
+th {
+		text-align: left;
+		padding-bottom: 10;
+
 
 }
 
@@ -39,7 +47,7 @@ table {
 
 
 h1 {
-	font-size:35px;
+	font-size:38px;
 	font-weight:600;
 	color:#FFFFFF;
 	float:left;
@@ -90,11 +98,7 @@ section {
 }
 
 .tabellenbereich {
-background-image: url(Sewing_Tools.jpg);
 padding: 10;
-width:97%;
-background-size: cover;
-background-repeat: no-repeat;
 margin-left: auto;
 margin-right: auto;
 
@@ -102,12 +106,21 @@ margin-right: auto;
 }
 
 
+
+.success {
+background-color: #90EE90
+}
+
 .header {
-background-color: #ae160c;
-height: 100px;
-width: 97%;
-padding: 10;
-line-height: 100px;
+	background-image: url(sewing-buttons.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+	width: 100%;
+	padding: 10;
+	line-height: 100px;
 
 
 }
@@ -116,7 +129,7 @@ form {
 	background: #FFFFFF;
 	opacity: 0.8;
 	margin: 10;
-  width: 500px;
+  width: 680px;
 	white-space: nowrap;
 	overflow:hidden;
 	padding: 10;

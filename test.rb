@@ -2,26 +2,29 @@ require "sinatra"
 
 
 class Schnittmuster
-  attr_reader :name, :stoff, :laenge
-  def initialize (name, stoff, laenge)
+  attr_reader :name, :stoff, :laenge, :done
+  def initialize (name, stoff, laenge, done)
   @name=name
   @stoff=stoff
   @laenge=laenge
+  @done=done
+
 
 end
 end
 
 schnittmustersammlung=[
 
-  Schnittmuster.new("Butterick 5354", "Webstoff", "1,5m"),
-  Schnittmuster.new("Butterick 5497", "Jersey", "1,5m"),
-  Schnittmuster.new("Colette Aurora", "Jersey", "1m")
+  Schnittmuster.new("Butterick 5354", "Webstoff", "1.5", "ja"),
+  Schnittmuster.new("Butterick 5497", "Jersey", "1.5", "nein"),
+  Schnittmuster.new("Colette Aurora", "Jersey", "1", "nein")
 
 ]
 
 get '/' do
 
-@schnittmustersammlung=schnittmustersammlung
+@schnittmusteranzeige=schnittmustersammlung
+@schnittmusterarchiv=schnittmustersammlung
 
  erb :index
 
@@ -55,14 +58,14 @@ end
 
 get '/selection' do
 
-@schnittmustersammlung=schnittmustersammlung.select do |schnittmuster|
-  params[:laengenselektion]==schnittmuster.laenge &&
+@schnittmusterarchiv=schnittmustersammlung
+@schnittmusteranzeige=schnittmustersammlung.select do |schnittmuster|
+  params[:laengenselektion].to_f >= schnittmuster.laenge.to_f &&
   params[:stoffselektion]==schnittmuster.stoff
 
 end
 
 erb :index
-
 
 end
 
@@ -73,7 +76,7 @@ end
 
 post '/' do
 
-  schnittmustersammlung << Schnittmuster.new(params[:name], params[:stoff], params[:laenge])
+  schnittmustersammlung << Schnittmuster.new(params[:name], params[:stoff], params[:laenge], params[:done])
 
   redirect '/'
 end
