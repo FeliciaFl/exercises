@@ -7,6 +7,8 @@ class Schnittmuster
   @name=name
   @stoff=stoff
   @laenge=laenge
+  # TODO: Could you handle negative lengths?
+  # TODO: Or invalid values like 'blabla'?
   @done=done
 
 
@@ -56,6 +58,9 @@ end
 
 
 
+# TODO: Maybe merge route `/selection` and `/`
+# Why? It feels strange that adding another pattern deletes all filter options
+# Because I'm redirected to `/`
 get '/selection' do
 
 @schnittmusterarchiv=schnittmustersammlung

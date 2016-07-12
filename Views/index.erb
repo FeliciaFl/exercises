@@ -58,6 +58,7 @@
         <button type="submit"> Select </button>
 
     </form>
+    <%# TODO: add another button here to unselect all filters%>
 
 
     <section class="tabellenbereich">
@@ -75,6 +76,8 @@
 
     <% @schnittmusteranzeige.each do |item| %>
     <tr
+     <%# TODO: put this piece of logic into the model  %>
+     <%# TODO: and call it with `item.done?`  %>
     <%= if item.done=="ja"
     "bgcolor=\"#4CC552\""
     end %>
