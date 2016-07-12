@@ -10,7 +10,7 @@ HPI Red: #cc0000;
 
 body {
 	font-family: Helvetica, Arial, sans-serif;
-  background-color: #FFFFFF
+  background-color: #FFFFFF;
 }
 
 table {
@@ -22,6 +22,24 @@ table {
 		border-collapse: collapse;
 
 }
+
+div {
+		padding-left: 10px;
+
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
 
 th {
 		text-align: left;
@@ -52,6 +70,7 @@ h1 {
 	color:#FFFFFF;
 	float:left;
 	width:100%;
+
 	}
 
 h2 {
@@ -119,8 +138,9 @@ background-color: #90EE90
 	margin-right: auto;
 	height: 100px;
 	width: 100%;
-	padding: 10;
+
 	line-height: 100px;
+
 
 
 }
