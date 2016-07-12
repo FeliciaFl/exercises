@@ -5,7 +5,7 @@
   <body>
 
     <section class="header">
-      <h1>1</h1>
+      <div><h1>The Digital Seamstress</h1></div>
       <br>
     </section>
 
@@ -58,7 +58,6 @@
         <button type="submit"> Select </button>
 
     </form>
-    <%# TODO: add another button here to unselect all filters%>
 
 
     <section class="tabellenbereich">
@@ -76,8 +75,6 @@
 
     <% @schnittmusteranzeige.each do |item| %>
     <tr
-     <%# TODO: put this piece of logic into the model  %>
-     <%# TODO: and call it with `item.done?`  %>
     <%= if item.done=="ja"
     "bgcolor=\"#4CC552\""
     end %>
@@ -97,8 +94,11 @@
      <form action='/' method="POST">
        <input type="text" name="name">
        <input type="text" name="stoff">
-       <input type="text" name="laenge">
-       <input type="text" name="done">
+       <input type="number" min="0" step="any" name="laenge">
+       <select name="done">
+         <option value="ja">ja</option>
+         <option value="nein">nein</option>
+       </select>
        <button type="submit"> Add </button>
      </form>
 
