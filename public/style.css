@@ -1,6 +1,7 @@
 
 * {
 	margin:0 ;
+	box-sizing: border-box;
 }
 
 body, html {
@@ -11,13 +12,15 @@ body, html {
 body {
 	font-family: 'Arial';
 	font-style: "normal";
-	background-color: white;
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
+	background-color: white;
+	color: #584638;
+
 }
 
 @media only screen and (max-width: 630px) {
@@ -35,18 +38,17 @@ body {
 	}
 }
 
-body * {
-	box-sizing: border-box;
-}
 
 .sewing-image {
-		background-image: url(bg-picture.jpg);
+		background-image: url(bg-white_white.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 50% 50%;
 		width: 100%;
 		position: relative;
 		height: 100vh;
+
+
 }
 
 .sewing-image .content {
@@ -56,7 +58,7 @@ body * {
 		width: 100%;
 		color: black;
 		z-index: 3;
-		padding: 50px;
+		padding: 50px 50px 20px 50px;
 		font-family: 'Rock Salt', cursive;
 	}
 
@@ -86,8 +88,7 @@ body * {
 
 
 table {
-	  background: #FFFFFF;
-		opacity: 0.5;
+
 		margin: 10;
 		width: 730px;
 		padding: 10;
@@ -119,11 +120,13 @@ th {
 
 
 h1 {
-	font-size:5em;
+	font-size:3em;
 	font-weight:600;
-	color:#FFFFFF;
 	float:left;
 	width:100%;
+	color:#a9030f;
+	display: inline;
+
 	}
 
 h2 {
@@ -140,7 +143,7 @@ h3 {
 	width:100%;
 	font-size:26px;
 	font-weight:500;
-	color:#596164;
+	color:#a9030f;
 	float:left;
 	width:100%;
 }
@@ -167,6 +170,7 @@ section {
 	margin-top: 10;
 
 
+
 }
 
 .tabellenbereich {
@@ -178,30 +182,30 @@ margin-right: auto;
 }
 
 
+.selector {
+		align-self: center;
+		text-align: center;
+		vertical-align: middle;
+		background-color: #9f0e19;
+		color:white;
+		-webkit-box-shadow: 0px 2px 23px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 2px 23px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 2px 23px 0px rgba(0,0,0,0.75);
+	 	margin-top: 20px;
+
+
+}
+
 
 .success {
 background-color: #90EE90
 }
 
-.header {
-	background-image: url(sewing-buttons.jpg);
 
-	background-repeat: no-repeat;
-	width: 100%;
-	height: 150px;
-	margin-left: auto;
-	margin-right: auto;
-
-
-
-
-}
 
 form {
-	background: #FFFFFF;
-	opacity: 0.8;
 	margin: 10;
-  width: 680px;
+
 	white-space: nowrap;
 	overflow:hidden;
 	padding: 10;
