@@ -2,17 +2,24 @@ require "sinatra"
 
 
 class Schnittmuster
+
   attr_reader :name, :stoff, :laenge, :done
+
   def initialize (name, stoff, laenge, done)
-  @name=name
-  @stoff=stoff
-  @laenge=laenge
-  # TODO: Could you handle negative lengths?
-  # TODO: Or invalid values like 'blabla'?
-  @done=done
+    @name=name
+    @stoff=stoff
+    @laenge=laenge
+    # TODO: Could you handle negative lengths?
+    # TODO: Or invalid values like 'blabla'?
+    @done=done
+  end
 
+  def gruen
+    if @done=="ja" then
+    "bgcolor=\"#cfeace\""
+    end
+  end
 
-end
 end
 
 schnittmustersammlung=[

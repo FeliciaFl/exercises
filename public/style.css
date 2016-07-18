@@ -43,11 +43,10 @@ body {
 		background-image: url(bg-white_white.jpg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: 50% 50%;
+		background-position: 30% 30%;
 		width: 100%;
 		position: relative;
-		height: 100vh;
-
+		height: 100%;
 
 }
 
@@ -132,7 +131,7 @@ h1 {
 h2 {
 	font-size:20px;
 	font-weight:500;
-	color:#fff;
+	color: black;
 	font-style: italic;
 	float:left;
 	width:100%;
