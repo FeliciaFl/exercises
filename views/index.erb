@@ -87,7 +87,7 @@
        </tr>
 
     <% @schnittmusteranzeige.each do |item| %>
-    <tr <%= item.gruen %> >
+    <tr class="<%=item.classes%>" >
       <td><%= item.name %></td>
       <td><%= item.stoff %></td>
       <td><%= item.laenge %></td>

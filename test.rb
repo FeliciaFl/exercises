@@ -14,12 +14,18 @@ class Schnittmuster
     @done=done
   end
 
-  def gruen
-    if @done=="ja" then
-    "bgcolor=\"#cfeace\""
-    end
+  def done?
+    @done == "ja"
   end
 
+  # TODO: separate view logic from model logic
+  def classes
+    classes = ["sewing-pattern"]
+    if done?
+      classes << "done"
+    end
+    classes.join(" ")
+  end
 end
 
 schnittmustersammlung=[
